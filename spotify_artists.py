@@ -20,8 +20,7 @@ result = sp.search(name) #search query
 result['tracks']['items'][0]['artists']
 
 
-## i made a playlist of all Justin Bieber songs and I am importing it here. 
-
+## JUSTIN BIEBER PLAYLIST OF ALL SONGS SORTED INTO A CSV 
 def getTrackIDs(user, playlist_id):
     ids = []
     playlist = sp.user_playlist(user, playlist_id)
@@ -29,20 +28,11 @@ def getTrackIDs(user, playlist_id):
         track = item['track']
         ids.append(track['id'])
     return ids
-#justin bieber
-ids = getTrackIDs('1292839507', '3M4ZBeI0K4RTd8uFdR5Oy7')
-#printing the ids as well as the amount of them
-print(ids)
-print(len(ids))
-message = "hello"
-print(message)
-#print(result)
+ids = getTrackIDs('1292839507', '3M4ZBeI0K4RTd8uFdR5Oy7')   
 
-#
 def getTrackFeatures(id):
   meta = sp.track(id)
   features = sp.audio_features(id)
-
   # meta
   name = meta['name']
   album = meta['album']['name']
@@ -50,8 +40,7 @@ def getTrackFeatures(id):
   release_date = meta['album']['release_date']
   length = meta['duration_ms']
   popularity = meta['popularity']
-
-  # features
+  # declaring features
   acousticness = features[0]['acousticness']
   danceability = features[0]['danceability']
   energy = features[0]['energy']
@@ -61,19 +50,32 @@ def getTrackFeatures(id):
   speechiness = features[0]['speechiness']
   tempo = features[0]['tempo']
   time_signature = features[0]['time_signature']
-
-  track = [name, album, artist, release_date, length, popularity, danceability, acousticness, danceability, energy, instrumentalness, liveness, loudness, speechiness, tempo, time_signature]
+  track = [name, album, artist, release_date, length, popularity, danceability, acousticness, energy, instrumentalness, liveness, loudness, speechiness, tempo, time_signature]
   return track
-test_track = getTrackFeatures('1Mg8vLBYwizu7AuhYQO64V')
-print(test_track)
-
   # loop over track ids 
 tracks = []
 for i in range(len(ids)):
   time.sleep(.5)
   track = getTrackFeatures(ids[i])
   tracks.append(track)
+# create dataset with all the wanted columns
+df = pd.DataFrame(tracks, columns = ['name', 'album', 'artist', 'release_date', 'length', 'popularity', 'danceability', 'acousticness', 'energy', 'instrumentalness', 'liveness', 'loudness', 'speechiness', 'tempo', 'time_signature'])
+df.to_csv("justin-bieber.csv", sep = ',')
+#PRINTIMG THINGS
+print(ids)
+print(len(ids))
+#JUSTIN BIEBER PLAYLIST OF ALL SONGS SORTED INTO A CSV
 
-# create dataset
-df = pd.DataFrame(tracks, columns = ['name', 'album', 'artist', 'release_date', 'length', 'popularity', 'danceability', 'acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness', 'speechiness', 'tempo', 'time_signature'])
-df.to_csv("spotify.csv", sep = ',')
+#artist 3
+
+#artist4 
+
+#artist 5
+
+#printing the ids as well as the amount of them
+print(ids)
+print(len(ids))
+
+
+#test_track = getTrackFeatures('1Mg8vLBYwizu7AuhYQO64V')
+#print(test_track)
