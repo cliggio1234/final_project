@@ -1,101 +1,101 @@
 ,name,album,artist,release_date,length,popularity,danceability,acousticness,energy,instrumentalness,liveness,loudness,speechiness,tempo,time_signature
-0,2 Much,Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,152796,70,0.583,0.593,0.444,0.0,0.353,-8.601,0.0456,119.59,4
-1,Deserve You,Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,187238,70,0.677,0.0314,0.633,0.0,0.112,-7.831,0.0771,89.934,4
-2,As I Am (feat. Khalid),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,174406,72,0.595,0.127,0.543,0.0,0.0975,-8.149,0.038,99.928,4
-3,Off My Face,Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,156467,72,0.509,0.92,0.228,0.0,0.104,-8.68,0.0332,90.674,4
-4,Holy (feat. Chance The Rapper),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,212093,69,0.67,0.2,0.693,0.0,0.0909,-8.34,0.35,87.017,4
-5,Unstable (feat. The Kid LAROI),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,158324,70,0.495,0.737,0.333,0.0,0.112,-10.109,0.0288,99.757,4
-6,MLK Interlude,Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,104007,64,0.649,0.386,0.429,0.0,0.311,-8.428,0.468,100.389,3
-7,Die For You (feat. Dominic Fike),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,198425,70,0.728,0.00196,0.629,1.94e-06,0.0847,-6.629,0.0318,135.031,4
-8,Hold On,Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,170813,71,0.658,0.0104,0.634,0.0,0.12,-6.068,0.0431,140.002,4
-9,Somebody,Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,179414,69,0.551,0.000284,0.756,9.48e-05,0.118,-7.679,0.045,75.991,4
-10,Ghost,Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,153190,72,0.601,0.185,0.741,2.91e-05,0.415,-5.569,0.0478,153.96,4
-11,Peaches (feat. Daniel Caesar & Giveon),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,198081,74,0.677,0.321,0.696,0.0,0.42,-6.181,0.119,90.03,4
-12,Love You Different (feat. BEAM),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,186695,70,0.759,0.0652,0.584,1.59e-06,0.16,-6.655,0.06,127.138,4
-13,Loved By You (feat. Burna Boy),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,159250,70,0.79,0.0696,0.724,2.33e-06,0.113,-6.972,0.0852,101.04,4
-14,Anyone,Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,190779,69,0.685,0.185,0.521,3.59e-06,0.111,-8.285,0.0345,115.885,4
-15,Lonely (with benny blanco),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,149189,67,0.619,0.9,0.241,0.0,0.116,-7.102,0.046,79.461,4
-16,There She Go (feat. Lil Uzi Vert),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,215019,75,0.725,0.00945,0.716,0.0,0.119,-5.448,0.0349,150.074,4
-17,I Can't Be Myself (feat. Jaden),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,193359,71,0.704,0.00197,0.659,3.36e-06,0.141,-5.959,0.0315,120.064,4
-18,Lifetime,Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,207020,76,0.48,0.771,0.274,0.0,0.114,-7.083,0.0317,179.637,3
-19,Wish You Would (feat. Quavo),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,241391,70,0.628,0.0328,0.702,0.0,0.0811,-4.918,0.0327,139.968,4
-20,Know No Better (feat. DaBaby),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,161819,70,0.67,0.615,0.441,0.0,0.0947,-7.803,0.104,131.92,4
-21,Name (feat. Tori Kelly),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,159724,70,0.45,0.829,0.324,0.0,0.089,-7.564,0.0264,151.658,4
-22,All Around Me,Changes,Justin Bieber,2020-02-14,136906,67,0.566,0.809,0.438,0.0,0.212,-7.564,0.0367,117.127,4
-23,Habitual,Changes,Justin Bieber,2020-02-14,168200,67,0.764,0.52,0.443,1.96e-05,0.0749,-6.625,0.0439,138.999,4
-24,Come Around Me,Changes,Justin Bieber,2020-02-14,200773,71,0.648,0.263,0.681,0.00783,0.0971,-8.389,0.0378,157.941,4
-25,Intentions (feat. Quavo),Changes,Justin Bieber,2020-02-14,212866,80,0.806,0.3,0.546,0.0,0.102,-6.637,0.0575,147.986,4
-26,Yummy,Changes,Justin Bieber,2020-02-14,208520,74,0.676,0.345,0.506,0.0,0.118,-6.652,0.0958,145.842,4
-27,Available,Changes,Justin Bieber,2020-02-14,195333,65,0.702,0.0736,0.608,0.0,0.129,-6.843,0.0359,75.012,4
-28,Forever (feat. Post Malone & Clever),Changes,Justin Bieber,2020-02-14,219933,72,0.825,0.538,0.483,1.48e-05,0.204,-5.746,0.08,139.98,4
-29,Running Over (feat. Lil Dicky),Changes,Justin Bieber,2020-02-14,179626,62,0.774,0.438,0.603,4.37e-05,0.0869,-7.319,0.0591,149.982,4
-30,Take It Out On Me,Changes,Justin Bieber,2020-02-14,178013,58,0.772,0.00337,0.616,2.36e-06,0.104,-4.673,0.102,129.967,4
-31,Second Emotion (feat. Travis Scott),Changes,Justin Bieber,2020-02-14,202720,65,0.796,0.0276,0.777,2.87e-05,0.095,-6.112,0.0567,141.97,4
-32,Get Me (feat. Kehlani),Changes,Justin Bieber,2020-02-14,185426,65,0.832,0.0492,0.508,5.39e-05,0.107,-6.913,0.149,109.352,5
-33,E.T.A.,Changes,Justin Bieber,2020-02-14,176733,63,0.465,0.49,0.494,0.0,0.127,-7.595,0.066,127.298,4
-34,Changes,Changes,Justin Bieber,2020-02-14,135493,66,0.485,0.738,0.412,0.0,0.12,-7.766,0.042,64.062,3
-35,Confirmation,Changes,Justin Bieber,2020-02-14,170586,62,0.438,0.608,0.315,0.0,0.151,-8.186,0.0375,190.064,3
-36,That's What Love Is,Changes,Justin Bieber,2020-02-14,165120,64,0.639,0.692,0.437,0.0,0.12,-6.959,0.0355,147.575,4
-37,At Least For Now,Changes,Justin Bieber,2020-02-14,149653,58,0.375,0.683,0.304,0.0,0.196,-9.897,0.0325,83.832,3
-38,Yummy - Summer Walker Remix,Changes,Justin Bieber,2020-02-14,209213,62,0.655,0.311,0.578,0.0,0.109,-5.711,0.0534,145.869,4
-39,Mark My Words,Purpose (Deluxe),Justin Bieber,2015-11-13,134346,60,0.383,0.88,0.256,2.69e-06,0.169,-8.572,0.0332,114.188,4
-40,I'll Show You,Purpose (Deluxe),Justin Bieber,2015-11-13,199946,67,0.361,0.05,0.608,7.96e-05,0.183,-6.757,0.098,191.812,4
-41,What Do You Mean?,Purpose (Deluxe),Justin Bieber,2015-11-13,205680,78,0.845,0.59,0.567,0.00142,0.0811,-8.118,0.0956,125.02,4
-42,Sorry,Purpose (Deluxe),Justin Bieber,2015-11-13,200786,81,0.654,0.0797,0.76,0.0,0.299,-3.669,0.045,99.945,4
-43,Love Yourself,Purpose (Deluxe),Justin Bieber,2015-11-13,233720,83,0.609,0.835,0.378,0.0,0.28,-9.828,0.438,100.418,4
-44,Company,Purpose (Deluxe),Justin Bieber,2015-11-13,208120,71,0.59,0.132,0.797,0.0,0.0846,-4.901,0.0614,94.948,4
-45,No Pressure,Purpose (Deluxe),Justin Bieber,2015-11-13,286853,62,0.644,0.121,0.595,0.0,0.279,-6.877,0.215,148.889,3
-46,No Sense,Purpose (Deluxe),Justin Bieber,2015-11-13,275040,62,0.643,0.0478,0.499,0.0,0.108,-6.795,0.0308,133.978,4
-47,The Feeling,Purpose (Deluxe),Justin Bieber,2015-11-13,244906,64,0.525,0.0819,0.809,1.22e-06,0.0971,-6.185,0.0619,127.073,4
-48,Life Is Worth Living,Purpose (Deluxe),Justin Bieber,2015-11-13,234786,62,0.558,0.907,0.296,0.0,0.108,-9.18,0.0427,76.04,4
-49,Where Are Ü Now,Purpose (Deluxe),Justin Bieber,2015-11-13,242520,0,0.432,0.0342,0.74,6.59e-06,0.14,-5.053,0.062,139.42,4
-50,Children,Purpose (Deluxe),Justin Bieber,2015-11-13,223333,58,0.634,0.0122,0.885,0.0,0.193,-4.702,0.304,127.064,4
-51,Purpose,Purpose (Deluxe),Justin Bieber,2015-11-13,210160,71,0.481,0.9,0.285,0.0,0.123,-10.848,0.0424,130.029,4
-52,Been You,Purpose (Deluxe),Justin Bieber,2015-11-13,199226,58,0.74,0.0223,0.781,0.0,0.321,-6.204,0.07,113.021,4
-53,Get Used To It,Purpose (Deluxe),Justin Bieber,2015-11-13,238133,56,0.687,0.0339,0.705,0.0,0.164,-8.453,0.0522,110.048,4
-54,We Are,Purpose (Deluxe),Justin Bieber,2015-11-13,202960,55,0.586,0.255,0.774,0.0,0.137,-3.883,0.261,78.712,4
-55,Trust,Purpose (Deluxe),Justin Bieber,2015-11-13,203613,54,0.512,0.0948,0.494,0.0,0.124,-8.16,0.206,76.002,3
-56,All In It,Purpose (Deluxe),Justin Bieber,2015-11-13,231413,54,0.459,0.502,0.701,3.62e-05,0.238,-7.496,0.0782,97.648,4
-57,What Do You Mean? - Acoustic,Purpose (Deluxe),Justin Bieber,2015-11-13,203800,62,0.773,0.794,0.358,0.0,0.104,-10.634,0.044,124.934,4
-58,Heartbreaker,Journals,Justin Bieber,2014-05-13,262840,62,0.568,0.146,0.517,0.0,0.343,-7.316,0.0894,104.443,4
-59,All That Matters,Journals,Justin Bieber,2014-05-13,191173,65,0.698,0.00535,0.509,0.0,0.0703,-5.798,0.0503,129.865,4
-60,Hold Tight,Journals,Justin Bieber,2014-05-13,254213,56,0.565,0.28,0.612,0.0,0.105,-5.795,0.169,117.697,4
-61,Recovery,Journals,Justin Bieber,2014-05-13,182373,54,0.669,0.014,0.527,0.0,0.338,-5.048,0.0812,130.271,4
-62,Bad Day,Journals,Justin Bieber,2014-05-13,145680,53,0.676,0.0221,0.509,0.0,0.221,-6.838,0.0423,81.981,4
-63,All Bad,Journals,Justin Bieber,2014-05-13,182746,51,0.696,0.018,0.419,0.000818,0.211,-8.198,0.0256,96.482,4
-64,PYD,Journals,Justin Bieber,2014-05-13,317200,49,0.465,0.837,0.494,0.0,0.434,-6.813,0.0364,123.24,4
-65,Roller Coaster,Journals,Justin Bieber,2014-05-13,201613,52,0.705,0.0136,0.865,0.0,0.179,-4.076,0.0712,97.969,4
-66,Change Me,Journals,Justin Bieber,2014-05-13,167320,50,0.407,0.594,0.34,0.0,0.188,-9.018,0.0492,129.505,3
-67,Confident,Journals,Justin Bieber,2014-05-13,248133,72,0.741,0.114,0.565,0.0,0.205,-5.448,0.108,134.122,4
-68,One Life,Journals,Justin Bieber,2014-05-13,242813,53,0.436,0.292,0.556,0.0,0.111,-6.54,0.114,114.896,3
-69,Backpack,Journals,Justin Bieber,2014-05-13,251480,50,0.552,0.154,0.771,0.0,0.19,-6.233,0.129,72.566,4
-70,What's Hatnin',Journals,Justin Bieber,2014-05-13,208533,48,0.556,0.0228,0.764,0.0,0.435,-3.979,0.0818,128.37,4
-71,Swap It Out,Journals,Justin Bieber,2014-05-13,240533,53,0.428,0.0313,0.666,0.0,0.0781,-6.241,0.0544,118.697,5
-72,Memphis,Journals,Justin Bieber,2014-05-13,223866,49,0.642,0.0123,0.718,0.0,0.0854,-6.954,0.056,122.973,4
-73,Flatline,Journals,Justin Bieber,2014-05-13,219346,51,0.341,0.482,0.666,0.0,0.194,-5.733,0.0653,121.677,4
-74,All Around The World,Believe (Deluxe Edition),Justin Bieber,2012-06-15,244546,62,0.689,0.0188,0.816,2.42e-06,0.181,-3.951,0.178,127.972,4
-75,Boyfriend,Believe (Deluxe Edition),Justin Bieber,2012-06-15,171333,65,0.717,0.0358,0.55,0.00198,0.126,-6.019,0.0519,96.979,4
-76,As Long As You Love Me,Believe (Deluxe Edition),Justin Bieber,2012-06-15,229466,70,0.571,0.0811,0.873,0.0,0.361,-3.382,0.1,139.691,4
-77,Catching Feelings,Believe (Deluxe Edition),Justin Bieber,2012-06-15,234680,49,0.324,0.353,0.541,0.0,0.35,-6.665,0.0415,85.036,4
-78,Take You,Believe (Deluxe Edition),Justin Bieber,2012-06-15,220893,49,0.663,0.00105,0.705,0.00237,0.232,-6.648,0.0349,126.043,4
-79,Right Here,Believe (Deluxe Edition),Justin Bieber,2012-06-15,204186,52,0.642,0.0235,0.57,0.0,0.329,-4.966,0.0421,92.042,4
-80,Fall,Believe (Deluxe Edition),Justin Bieber,2012-06-15,248386,54,0.607,0.259,0.754,0.0,0.111,-4.321,0.0412,82.995,4
-81,Die In Your Arms,Believe (Deluxe Edition),Justin Bieber,2012-06-15,237293,52,0.568,0.0309,0.877,4.4e-06,0.213,-5.094,0.0924,171.723,4
-82,Thought Of You,Believe (Deluxe Edition),Justin Bieber,2012-06-15,230106,48,0.697,0.0094,0.705,7.09e-06,0.105,-5.032,0.031,123.217,4
-83,Beauty And A Beat,Believe (Deluxe Edition),Justin Bieber,2012-06-15,227986,73,0.602,0.000688,0.843,5.27e-05,0.0682,-4.831,0.0593,128.003,4
-84,One Love,Believe (Deluxe Edition),Justin Bieber,2012-06-15,234493,48,0.689,0.00267,0.611,0.0,0.0942,-7.56,0.032,127.914,4
-85,Be Alright,Believe (Deluxe Edition),Justin Bieber,2012-06-15,189653,60,0.803,0.589,0.356,0.0,0.16,-9.026,0.0326,106.95,4
-86,Believe,Believe (Deluxe Edition),Justin Bieber,2012-06-15,222560,50,0.518,0.141,0.854,0.0,0.171,-5.71,0.113,159.807,4
-87,Out Of Town Girl,Believe (Deluxe Edition),Justin Bieber,2012-06-15,213560,47,0.594,0.126,0.879,6.32e-06,0.151,-5.586,0.0715,80.994,4
-88,She Don't Like The Lights,Believe (Deluxe Edition),Justin Bieber,2012-06-15,239866,47,0.573,0.00574,0.896,0.00213,0.317,-4.6,0.102,123.944,4
-89,Maria,Believe (Deluxe Edition),Justin Bieber,2012-06-15,248293,49,0.825,0.00997,0.687,1.32e-05,0.19,-6.794,0.0414,111.002,4
-90,Fairytale,Believe (Deluxe Edition),Justin Bieber,2012-06-15,193186,44,0.547,0.0271,0.805,0.601,0.11,-9.294,0.0754,171.952,4
-91,Never Say Never,Never Say Never - The Remixes,Justin Bieber,2011-01-01,227853,71,0.739,0.0181,0.807,0.0,0.295,-5.063,0.0652,97.048,4
-92,That Should Be Me,Never Say Never - The Remixes,Justin Bieber,2011-01-01,230786,56,0.467,0.0312,0.631,0.0,0.0596,-6.762,0.0318,139.962,4
-93,Somebody To Love Remix,Never Say Never - The Remixes,Justin Bieber,2011-01-01,220160,57,0.703,0.00388,0.836,0.0,0.16,-4.619,0.0283,129.987,4
-94,Up,Never Say Never - The Remixes,Justin Bieber,2011-01-01,235626,47,0.633,0.123,0.708,0.0,0.1,-4.258,0.0452,62.997,4
-95,Overboard (Live),Never Say Never - The Remixes,Justin Bieber,2011-01-01,307880,21,0.359,0.425,0.882,0.0,0.791,-4.482,0.0696,173.956,4
-96,Runaway Love - Kanye West Remix,Never Say Never - The Remixes,Justin Bieber,2011-01-01,287333,41,0.742,0.14,0.742,0.0,0.073,-4.364,0.0928,104.046,4
-97,Born To Be Somebody,Never Say Never - The Remixes,Justin Bieber,2011-01-01,181026,46,0.674,0.187,0.619,0.0,0.0493,-5.239,0.0295,117.927,4
-98,Only Thing I Ever Get For Christmas,Under The Mistletoe,Justin Bieber,2011-01-01,192160,13,0.478,0.217,0.63,0.0,0.111,-8.032,0.0518,84.822,4
-99,Mistletoe,Under The Mistletoe,Justin Bieber,2011-01-01,182946,25,0.658,0.498,0.56,0.0,0.0794,-9.049,0.0467,161.994,4
+0,2 Much,Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,2.5466,70,0.583,0.593,0.444,0.0,0.353,-8.601,0.0456,119.59,4
+1,Deserve You,Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,3.120633333333333,70,0.677,0.0314,0.633,0.0,0.112,-7.831,0.0771,89.934,4
+2,As I Am (feat. Khalid),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,2.9067666666666665,72,0.595,0.127,0.543,0.0,0.0975,-8.149,0.038,99.928,4
+3,Off My Face,Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,2.6077833333333333,72,0.509,0.92,0.228,0.0,0.104,-8.68,0.0332,90.674,4
+4,Holy (feat. Chance The Rapper),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,3.534883333333333,69,0.67,0.2,0.693,0.0,0.0909,-8.34,0.35,87.017,4
+5,Unstable (feat. The Kid LAROI),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,2.638733333333333,70,0.495,0.737,0.333,0.0,0.112,-10.109,0.0288,99.757,4
+6,MLK Interlude,Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,1.73345,64,0.649,0.386,0.429,0.0,0.311,-8.428,0.468,100.389,3
+7,Die For You (feat. Dominic Fike),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,3.3070833333333334,70,0.728,0.00196,0.629,1.94e-06,0.0847,-6.629,0.0318,135.031,4
+8,Hold On,Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,2.8468833333333334,71,0.658,0.0104,0.634,0.0,0.12,-6.068,0.0431,140.002,4
+9,Somebody,Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,2.9902333333333333,69,0.551,0.000284,0.756,9.48e-05,0.118,-7.679,0.045,75.991,4
+10,Ghost,Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,2.553166666666667,72,0.601,0.185,0.741,2.91e-05,0.415,-5.569,0.0478,153.96,4
+11,Peaches (feat. Daniel Caesar & Giveon),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,3.30135,74,0.677,0.321,0.696,0.0,0.42,-6.181,0.119,90.03,4
+12,Love You Different (feat. BEAM),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,3.1115833333333334,70,0.759,0.0652,0.584,1.59e-06,0.16,-6.655,0.06,127.138,4
+13,Loved By You (feat. Burna Boy),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,2.654166666666667,70,0.79,0.0696,0.724,2.33e-06,0.113,-6.972,0.0852,101.04,4
+14,Anyone,Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,3.17965,69,0.685,0.185,0.521,3.59e-06,0.111,-8.285,0.0345,115.885,4
+15,Lonely (with benny blanco),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,2.486483333333333,67,0.619,0.9,0.241,0.0,0.116,-7.102,0.046,79.461,4
+16,There She Go (feat. Lil Uzi Vert),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,3.58365,75,0.725,0.00945,0.716,0.0,0.119,-5.448,0.0349,150.074,4
+17,I Can't Be Myself (feat. Jaden),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,3.22265,71,0.704,0.00197,0.659,3.36e-06,0.141,-5.959,0.0315,120.064,4
+18,Lifetime,Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,3.4503333333333335,76,0.48,0.771,0.274,0.0,0.114,-7.083,0.0317,179.637,3
+19,Wish You Would (feat. Quavo),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,4.023183333333333,70,0.628,0.0328,0.702,0.0,0.0811,-4.918,0.0327,139.968,4
+20,Know No Better (feat. DaBaby),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,2.6969833333333333,70,0.67,0.615,0.441,0.0,0.0947,-7.803,0.104,131.92,4
+21,Name (feat. Tori Kelly),Justice (Triple Chucks Deluxe),Justin Bieber,2021-03-26,2.6620666666666666,70,0.45,0.829,0.324,0.0,0.089,-7.564,0.0264,151.658,4
+22,All Around Me,Changes,Justin Bieber,2020-02-14,2.2817666666666665,67,0.566,0.809,0.438,0.0,0.212,-7.564,0.0367,117.127,4
+23,Habitual,Changes,Justin Bieber,2020-02-14,2.8033333333333332,67,0.764,0.52,0.443,1.96e-05,0.0749,-6.625,0.0439,138.999,4
+24,Come Around Me,Changes,Justin Bieber,2020-02-14,3.346216666666667,70,0.648,0.263,0.681,0.00783,0.0971,-8.389,0.0378,157.941,4
+25,Intentions (feat. Quavo),Changes,Justin Bieber,2020-02-14,3.5477666666666665,80,0.806,0.3,0.546,0.0,0.102,-6.637,0.0575,147.986,4
+26,Yummy,Changes,Justin Bieber,2020-02-14,3.4753333333333334,74,0.676,0.345,0.506,0.0,0.118,-6.652,0.0958,145.842,4
+27,Available,Changes,Justin Bieber,2020-02-14,3.25555,65,0.702,0.0736,0.608,0.0,0.129,-6.843,0.0359,75.012,4
+28,Forever (feat. Post Malone & Clever),Changes,Justin Bieber,2020-02-14,3.66555,72,0.825,0.538,0.483,1.48e-05,0.204,-5.746,0.08,139.98,4
+29,Running Over (feat. Lil Dicky),Changes,Justin Bieber,2020-02-14,2.9937666666666667,62,0.774,0.438,0.603,4.37e-05,0.0869,-7.319,0.0591,149.982,4
+30,Take It Out On Me,Changes,Justin Bieber,2020-02-14,2.9668833333333335,58,0.772,0.00337,0.616,2.36e-06,0.104,-4.673,0.102,129.967,4
+31,Second Emotion (feat. Travis Scott),Changes,Justin Bieber,2020-02-14,3.3786666666666667,64,0.796,0.0276,0.777,2.87e-05,0.095,-6.112,0.0567,141.97,4
+32,Get Me (feat. Kehlani),Changes,Justin Bieber,2020-02-14,3.0904333333333334,65,0.832,0.0492,0.508,5.39e-05,0.107,-6.913,0.149,109.352,5
+33,E.T.A.,Changes,Justin Bieber,2020-02-14,2.94555,62,0.465,0.49,0.494,0.0,0.127,-7.595,0.066,127.298,4
+34,Changes,Changes,Justin Bieber,2020-02-14,2.2582166666666668,66,0.485,0.738,0.412,0.0,0.12,-7.766,0.042,64.062,3
+35,Confirmation,Changes,Justin Bieber,2020-02-14,2.8431,62,0.438,0.608,0.315,0.0,0.151,-8.186,0.0375,190.064,3
+36,That's What Love Is,Changes,Justin Bieber,2020-02-14,2.752,63,0.639,0.692,0.437,0.0,0.12,-6.959,0.0355,147.575,4
+37,At Least For Now,Changes,Justin Bieber,2020-02-14,2.4942166666666665,57,0.375,0.683,0.304,0.0,0.196,-9.897,0.0325,83.832,3
+38,Yummy - Summer Walker Remix,Changes,Justin Bieber,2020-02-14,3.486883333333333,62,0.655,0.311,0.578,0.0,0.109,-5.711,0.0534,145.869,4
+39,Mark My Words,Purpose (Deluxe),Justin Bieber,2015-11-13,2.2391,60,0.383,0.88,0.256,2.69e-06,0.169,-8.572,0.0332,114.188,4
+40,I'll Show You,Purpose (Deluxe),Justin Bieber,2015-11-13,3.3324333333333334,66,0.361,0.05,0.608,7.96e-05,0.183,-6.757,0.098,191.812,4
+41,What Do You Mean?,Purpose (Deluxe),Justin Bieber,2015-11-13,3.428,78,0.845,0.59,0.567,0.00142,0.0811,-8.118,0.0956,125.02,4
+42,Sorry,Purpose (Deluxe),Justin Bieber,2015-11-13,3.346433333333333,81,0.654,0.0797,0.76,0.0,0.299,-3.669,0.045,99.945,4
+43,Love Yourself,Purpose (Deluxe),Justin Bieber,2015-11-13,3.8953333333333333,83,0.609,0.835,0.378,0.0,0.28,-9.828,0.438,100.418,4
+44,Company,Purpose (Deluxe),Justin Bieber,2015-11-13,3.4686666666666666,71,0.59,0.132,0.797,0.0,0.0846,-4.901,0.0614,94.948,4
+45,No Pressure,Purpose (Deluxe),Justin Bieber,2015-11-13,4.780883333333334,62,0.644,0.121,0.595,0.0,0.279,-6.877,0.215,148.889,3
+46,No Sense,Purpose (Deluxe),Justin Bieber,2015-11-13,4.584,62,0.643,0.0478,0.499,0.0,0.108,-6.795,0.0308,133.978,4
+47,The Feeling,Purpose (Deluxe),Justin Bieber,2015-11-13,4.081766666666667,64,0.525,0.0819,0.809,1.22e-06,0.0971,-6.185,0.0619,127.073,4
+48,Life Is Worth Living,Purpose (Deluxe),Justin Bieber,2015-11-13,3.9131,62,0.558,0.907,0.296,0.0,0.108,-9.18,0.0427,76.04,4
+49,Where Are Ü Now,Purpose (Deluxe),Justin Bieber,2015-11-13,4.042,0,0.432,0.0342,0.74,6.59e-06,0.14,-5.053,0.062,139.42,4
+50,Children,Purpose (Deluxe),Justin Bieber,2015-11-13,3.7222166666666667,58,0.634,0.0122,0.885,0.0,0.193,-4.702,0.304,127.064,4
+51,Purpose,Purpose (Deluxe),Justin Bieber,2015-11-13,3.502666666666667,70,0.481,0.9,0.285,0.0,0.123,-10.848,0.0424,130.029,4
+52,Been You,Purpose (Deluxe),Justin Bieber,2015-11-13,3.3204333333333333,58,0.74,0.0223,0.781,0.0,0.321,-6.204,0.07,113.021,4
+53,Get Used To It,Purpose (Deluxe),Justin Bieber,2015-11-13,3.9688833333333333,56,0.687,0.0339,0.705,0.0,0.164,-8.453,0.0522,110.048,4
+54,We Are,Purpose (Deluxe),Justin Bieber,2015-11-13,3.3826666666666667,55,0.586,0.255,0.774,0.0,0.137,-3.883,0.261,78.712,4
+55,Trust,Purpose (Deluxe),Justin Bieber,2015-11-13,3.39355,54,0.512,0.0948,0.494,0.0,0.124,-8.16,0.206,76.002,3
+56,All In It,Purpose (Deluxe),Justin Bieber,2015-11-13,3.856883333333333,54,0.459,0.502,0.701,3.62e-05,0.238,-7.496,0.0782,97.648,4
+57,What Do You Mean? - Acoustic,Purpose (Deluxe),Justin Bieber,2015-11-13,3.3966666666666665,61,0.773,0.794,0.358,0.0,0.104,-10.634,0.044,124.934,4
+58,Heartbreaker,Journals,Justin Bieber,2014-05-13,4.3806666666666665,61,0.568,0.146,0.517,0.0,0.343,-7.316,0.0894,104.443,4
+59,All That Matters,Journals,Justin Bieber,2014-05-13,3.1862166666666667,65,0.698,0.00535,0.509,0.0,0.0703,-5.798,0.0503,129.865,4
+60,Hold Tight,Journals,Justin Bieber,2014-05-13,4.236883333333333,55,0.565,0.28,0.612,0.0,0.105,-5.795,0.169,117.697,4
+61,Recovery,Journals,Justin Bieber,2014-05-13,3.03955,54,0.669,0.014,0.527,0.0,0.338,-5.048,0.0812,130.271,4
+62,Bad Day,Journals,Justin Bieber,2014-05-13,2.428,53,0.676,0.0221,0.509,0.0,0.221,-6.838,0.0423,81.981,4
+63,All Bad,Journals,Justin Bieber,2014-05-13,3.0457666666666667,51,0.696,0.018,0.419,0.000818,0.211,-8.198,0.0256,96.482,4
+64,PYD,Journals,Justin Bieber,2014-05-13,5.286666666666667,48,0.465,0.837,0.494,0.0,0.434,-6.813,0.0364,123.24,4
+65,Roller Coaster,Journals,Justin Bieber,2014-05-13,3.3602166666666666,52,0.705,0.0136,0.865,0.0,0.179,-4.076,0.0712,97.969,4
+66,Change Me,Journals,Justin Bieber,2014-05-13,2.788666666666667,50,0.407,0.594,0.34,0.0,0.188,-9.018,0.0492,129.505,3
+67,Confident,Journals,Justin Bieber,2014-05-13,4.13555,72,0.741,0.114,0.565,0.0,0.205,-5.448,0.108,134.122,4
+68,One Life,Journals,Justin Bieber,2014-05-13,4.046883333333334,53,0.436,0.292,0.556,0.0,0.111,-6.54,0.114,114.896,3
+69,Backpack,Journals,Justin Bieber,2014-05-13,4.191333333333334,50,0.552,0.154,0.771,0.0,0.19,-6.233,0.129,72.566,4
+70,What's Hatnin',Journals,Justin Bieber,2014-05-13,3.47555,48,0.556,0.0228,0.764,0.0,0.435,-3.979,0.0818,128.37,4
+71,Swap It Out,Journals,Justin Bieber,2014-05-13,4.008883333333333,52,0.428,0.0313,0.666,0.0,0.0781,-6.241,0.0544,118.697,5
+72,Memphis,Journals,Justin Bieber,2014-05-13,3.7311,49,0.642,0.0123,0.718,0.0,0.0854,-6.954,0.056,122.973,4
+73,Flatline,Journals,Justin Bieber,2014-05-13,3.6557666666666666,51,0.341,0.482,0.666,0.0,0.194,-5.733,0.0653,121.677,4
+74,All Around The World,Believe (Deluxe Edition),Justin Bieber,2012-06-15,4.0757666666666665,62,0.689,0.0188,0.816,2.42e-06,0.181,-3.951,0.178,127.972,4
+75,Boyfriend,Believe (Deluxe Edition),Justin Bieber,2012-06-15,2.85555,65,0.717,0.0358,0.55,0.00198,0.126,-6.019,0.0519,96.979,4
+76,As Long As You Love Me,Believe (Deluxe Edition),Justin Bieber,2012-06-15,3.8244333333333334,70,0.571,0.0811,0.873,0.0,0.361,-3.382,0.1,139.691,4
+77,Catching Feelings,Believe (Deluxe Edition),Justin Bieber,2012-06-15,3.9113333333333333,49,0.324,0.353,0.541,0.0,0.35,-6.665,0.0415,85.036,4
+78,Take You,Believe (Deluxe Edition),Justin Bieber,2012-06-15,3.68155,49,0.663,0.00105,0.705,0.00237,0.232,-6.648,0.0349,126.043,4
+79,Right Here,Believe (Deluxe Edition),Justin Bieber,2012-06-15,3.4031,52,0.642,0.0235,0.57,0.0,0.329,-4.966,0.0421,92.042,4
+80,Fall,Believe (Deluxe Edition),Justin Bieber,2012-06-15,4.139766666666667,54,0.607,0.259,0.754,0.0,0.111,-4.321,0.0412,82.995,4
+81,Die In Your Arms,Believe (Deluxe Edition),Justin Bieber,2012-06-15,3.9548833333333335,52,0.568,0.0309,0.877,4.4e-06,0.213,-5.094,0.0924,171.723,4
+82,Thought Of You,Believe (Deluxe Edition),Justin Bieber,2012-06-15,3.8351,48,0.697,0.0094,0.705,7.09e-06,0.105,-5.032,0.031,123.217,4
+83,Beauty And A Beat,Believe (Deluxe Edition),Justin Bieber,2012-06-15,3.7997666666666667,73,0.602,0.000688,0.843,5.27e-05,0.0682,-4.831,0.0593,128.003,4
+84,One Love,Believe (Deluxe Edition),Justin Bieber,2012-06-15,3.9082166666666667,48,0.689,0.00267,0.611,0.0,0.0942,-7.56,0.032,127.914,4
+85,Be Alright,Believe (Deluxe Edition),Justin Bieber,2012-06-15,3.1608833333333335,60,0.803,0.589,0.356,0.0,0.16,-9.026,0.0326,106.95,4
+86,Believe,Believe (Deluxe Edition),Justin Bieber,2012-06-15,3.7093333333333334,50,0.518,0.141,0.854,0.0,0.171,-5.71,0.113,159.807,4
+87,Out Of Town Girl,Believe (Deluxe Edition),Justin Bieber,2012-06-15,3.5593333333333335,47,0.594,0.126,0.879,6.32e-06,0.151,-5.586,0.0715,80.994,4
+88,She Don't Like The Lights,Believe (Deluxe Edition),Justin Bieber,2012-06-15,3.9977666666666667,47,0.573,0.00574,0.896,0.00213,0.317,-4.6,0.102,123.944,4
+89,Maria,Believe (Deluxe Edition),Justin Bieber,2012-06-15,4.138216666666667,49,0.825,0.00997,0.687,1.32e-05,0.19,-6.794,0.0414,111.002,4
+90,Fairytale,Believe (Deluxe Edition),Justin Bieber,2012-06-15,3.2197666666666667,44,0.547,0.0271,0.805,0.601,0.11,-9.294,0.0754,171.952,4
+91,Never Say Never,Never Say Never - The Remixes,Justin Bieber,2011-01-01,3.79755,71,0.739,0.0181,0.807,0.0,0.295,-5.063,0.0652,97.048,4
+92,That Should Be Me,Never Say Never - The Remixes,Justin Bieber,2011-01-01,3.846433333333333,56,0.467,0.0312,0.631,0.0,0.0596,-6.762,0.0318,139.962,4
+93,Somebody To Love Remix,Never Say Never - The Remixes,Justin Bieber,2011-01-01,3.6693333333333333,57,0.703,0.00388,0.836,0.0,0.16,-4.619,0.0283,129.987,4
+94,Up,Never Say Never - The Remixes,Justin Bieber,2011-01-01,3.9271,46,0.633,0.123,0.708,0.0,0.1,-4.258,0.0452,62.997,4
+95,Overboard (Live),Never Say Never - The Remixes,Justin Bieber,2011-01-01,5.131333333333333,21,0.359,0.425,0.882,0.0,0.791,-4.482,0.0696,173.956,4
+96,Runaway Love - Kanye West Remix,Never Say Never - The Remixes,Justin Bieber,2011-01-01,4.788883333333334,40,0.742,0.14,0.742,0.0,0.073,-4.364,0.0928,104.046,4
+97,Born To Be Somebody,Never Say Never - The Remixes,Justin Bieber,2011-01-01,3.0171,46,0.674,0.187,0.619,0.0,0.0493,-5.239,0.0295,117.927,4
+98,Only Thing I Ever Get For Christmas,Under The Mistletoe,Justin Bieber,2011-01-01,3.2026666666666666,13,0.478,0.217,0.63,0.0,0.111,-8.032,0.0518,84.822,4
+99,Mistletoe,Under The Mistletoe,Justin Bieber,2011-01-01,3.0491,25,0.658,0.498,0.56,0.0,0.0794,-9.049,0.0467,161.994,4
