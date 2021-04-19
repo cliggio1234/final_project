@@ -206,13 +206,28 @@ df4.to_csv("frank-ocean.csv", sep = ',')
 ### STATS OF THE CSVS 
 #mean danceability score of JUSTIN BIEBER
 mean1 = df['danceability'].mean()
-print('Mean danceability score of Justin Bieber is ' +str(mean1))
+print('The mean danceability score of Justin Bieber is ' +str(mean1))
 #mean danceability song of TAYLOR SWIFT
 mean2 = df2['danceability'].mean()
-print(mean2)
+print('The mean danceability score of Taylor Swift is ' +str(mean2))
 #mean danceability score of DUA LIPA
 mean3 = df3['danceability'].mean()
-print(mean3)
+print('The mean danceability score of Dua Lipa is ' + str(mean3))
 #mean danceability score of FRANK OCEAN
 mean4 = df4['danceability'].mean()
-print(mean4)
+print('The mean danceability score of Frank Ocean is ' + str(mean4))
+
+
+#the mean danceability scores grouped by album
+  #for justin biber
+mean_by_album1 = df.groupby(['album'])['danceability'].mean()
+print(mean_by_album1)
+  #for taylor swift
+mean_by_album2 = df2.groupby(['album'])['danceability'].mean()
+print(mean_by_album2)
+  #for dua lipa
+mean_by_album3 = df3.groupby(['album'])['danceability'].mean()
+print(mean_by_album3)
+  #for frank ocean
+mean_by_album4 = df4.groupby(['album'])['danceability'].mean()
+print(mean_by_album4)
