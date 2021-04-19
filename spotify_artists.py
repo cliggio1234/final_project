@@ -34,6 +34,7 @@ def getTrackFeatures(id):
   artist = meta['album']['artists'][0]['name']
   release_date = meta['album']['release_date']
   length = meta['duration_ms']
+  lengths = length/60000
   popularity = meta['popularity']
   # declaring features
   acousticness = features[0]['acousticness']
@@ -45,7 +46,7 @@ def getTrackFeatures(id):
   speechiness = features[0]['speechiness']
   tempo = features[0]['tempo']
   time_signature = features[0]['time_signature']
-  track = [name, album, artist, release_date, length, popularity, danceability, acousticness, energy, instrumentalness, liveness, loudness, speechiness, tempo, time_signature]
+  track = [name, album, artist, release_date, lengths, popularity, danceability, acousticness, energy, instrumentalness, liveness, loudness, speechiness, tempo, time_signature]
   return track
   # loop over track ids 
 tracks = []
@@ -59,6 +60,7 @@ df.to_csv("justin-bieber.csv", sep = ',')
 #PRINTIMG THINGS
 ##print(ids)
 ##print(len(ids))
+
 
 ## TAYLOR SWIFT AND ALL HER SONGS SORTED INTO A CSV
 def getTrackIDs2(user, playlist_id):
@@ -79,6 +81,7 @@ def getTrackFeatures2(id):
   artist = meta['album']['artists'][0]['name']
   release_date = meta['album']['release_date']
   length = meta['duration_ms']
+  lengths = length/60000
   popularity = meta['popularity']
   # declaring features
   acousticness = features[0]['acousticness']
@@ -90,7 +93,7 @@ def getTrackFeatures2(id):
   speechiness = features[0]['speechiness']
   tempo = features[0]['tempo']
   time_signature = features[0]['time_signature']
-  track = [name, album, artist, release_date, length, popularity, danceability, acousticness, energy, instrumentalness, liveness, loudness, speechiness, tempo, time_signature]
+  track = [name, album, artist, release_date, lengths, popularity, danceability, acousticness, energy, instrumentalness, liveness, loudness, speechiness, tempo, time_signature]
   return track
   # loop over track ids 
 tracks2 = []
@@ -125,6 +128,7 @@ def getTrackFeatures3(id):
   artist = meta['album']['artists'][0]['name']
   release_date = meta['album']['release_date']
   length = meta['duration_ms']
+  lengths = length/60000
   popularity = meta['popularity']
   # declaring features
   acousticness = features[0]['acousticness']
@@ -136,7 +140,7 @@ def getTrackFeatures3(id):
   speechiness = features[0]['speechiness']
   tempo = features[0]['tempo']
   time_signature = features[0]['time_signature']
-  track = [name, album, artist, release_date, length, popularity, danceability, acousticness, energy, instrumentalness, liveness, loudness, speechiness, tempo, time_signature]
+  track = [name, album, artist, release_date, lengths, popularity, danceability, acousticness, energy, instrumentalness, liveness, loudness, speechiness, tempo, time_signature]
   return track
   # loop over track ids 
 tracks3 = []
@@ -199,5 +203,16 @@ df4.to_csv("frank-ocean.csv", sep = ',')
 ##print(len(ids4))
  
 
-#artist 5
-
+### STATS OF THE CSVS 
+#mean danceability score of JUSTIN BIEBER
+mean1 = df['danceability'].mean()
+print('Mean danceability score of Justin Bieber is ' +str(mean1))
+#mean danceability song of TAYLOR SWIFT
+mean2 = df2['danceability'].mean()
+print(mean2)
+#mean danceability score of DUA LIPA
+mean3 = df3['danceability'].mean()
+print(mean3)
+#mean danceability score of FRANK OCEAN
+mean4 = df4['danceability'].mean()
+print(mean4)
