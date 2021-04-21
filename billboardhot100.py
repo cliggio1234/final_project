@@ -38,3 +38,18 @@ def insert_data(data, tablename, curr, conn, chunksize = 25):
         curr.execute("INSERT INTO %s (Rank,Title,Artist) VALUES %s" % (tablename, ','.join(values)))
         conn.commit()
     
+def main():
+    """
+    * Perform key steps in order.
+    """
+    dt = "2021-04-20"
+    db_name = "Chart_Data_%s.db" % dt.replace('-', '_')
+    tablename = 'Billboard_Hot_100' 
+    data = getChart(dt)
+    curr, conn = setUpDatabase(db_name)
+    setUpHot100Table(tablename,curr,conn)
+    insert_data(data,tablename,curr,conn)
+
+if __name__ == "__main__":
+    main()
+    unittest.main(verbosity = 2)
