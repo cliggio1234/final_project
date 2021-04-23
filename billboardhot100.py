@@ -89,6 +89,7 @@ def main_2():
     chartConn, chartCursor = get_conns()
     count_frequencies(chartConn, chartCursor, songTable)
     
+    
 def main():
     """
     * Perform key steps in order.
