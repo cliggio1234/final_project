@@ -23,7 +23,7 @@ def setUpHot100Table(tablename, curr, conn):
     * Create table containing Top 100 Billboard songs.
     """
     curr.execute("DROP TABLE IF EXISTS %s" % tablename)
-    curr.execute("CREATE TABLE %s (Rank INTEGER, Title TEXT, Artist TEXT)" % tablename)
+    curr.execute("CREATE TABLE %s (Rank INTEGER, Title TEXT, Artist TEXT, Weeks INTEGER)" % tablename)
     conn.commit()
 
 def insert_data(data, tablename, curr, conn, chunksize = 25):
@@ -34,8 +34,8 @@ def insert_data(data, tablename, curr, conn, chunksize = 25):
         values = []
         entries = data.entries[index:index+chunksize]
         for rank, entry in enumerate(entries):
-            values.append('(%s,"%s","%s")' % (rank + 1 + index, entry.title, entry.artist))
-        curr.execute("INSERT INTO %s (Rank,Title,Artist) VALUES %s" % (tablename, ','.join(values)))
+            values.append('(%s,"%s","%s","%s")' % (rank + 1 + index, entry.title, entry.artist, entry.weeks))
+        curr.execute("INSERT INTO %s (Rank,Title,Artist,Weeks) VALUES %s" % (tablename, ','.join(values)))
         conn.commit()
     
     
