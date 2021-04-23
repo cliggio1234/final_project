@@ -4,6 +4,8 @@ import unittest
 import billboard
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+
 
 def getChart(date):
     # starter code to pull from Billboard API from: https://rapidapi.com/LDVIN/api/billboard-api
@@ -59,9 +61,9 @@ def insert_addie(songTable):
     topSongs = pd.read_csv('addie-top-100.csv', encoding = "UTF-8", index_col = [0])
     topSongs.columns = topSongs.columns.str.strip()
     topSongs.columns = topSongs.columns.str.replace("."," ")
-    #lowercolumns = ["name", "album", "artist"]
-    #for col in lowercolumns:
-    #    topSongs[col] = topSongs[col].apply(lambda x : x.lower())
+    lowercolumns = ["name", "album", "artist"]
+    for col in lowercolumns:
+        topSongs[col] = topSongs[col].apply(lambda x : x.lower())
     topSongs.to_sql(songTable, chartConn)
     chartConn.commit()
 
@@ -85,10 +87,11 @@ def count_frequencies(chartConn, chartCursor, songTable):
 
 def main_2():
     songTable = "MyTopSongs_Addie"
-    #insert_addie(songTable)
+    insert_addie(songTable)
     chartConn, chartCursor = get_conns()
     count_frequencies(chartConn, chartCursor, songTable)
-    
+
+
     
 def main():
     """
