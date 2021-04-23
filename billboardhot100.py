@@ -38,6 +38,7 @@ def insert_data(data, tablename, curr, conn, chunksize = 25):
         curr.execute("INSERT INTO %s (Rank,Title,Artist) VALUES %s" % (tablename, ','.join(values)))
         conn.commit()
     
+    
 def main():
     """
     * Perform key steps in order.
