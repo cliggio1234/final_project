@@ -85,10 +85,11 @@ def count_frequencies(chartConn, chartCursor, songTable):
 
 def main_2():
     songTable = "MyTopSongs_Addie"
-    #insert_addie(songTable)
+    insert_addie(songTable)
     chartConn, chartCursor = get_conns()
     count_frequencies(chartConn, chartCursor, songTable)
-    
+
+
     
 def main():
     """
