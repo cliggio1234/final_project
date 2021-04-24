@@ -4,9 +4,9 @@ import pandas as pd
 import time 
 import sqlite3
 import csv_to_sqlite
-import numpy as np
-import seaborn as sns 
 import matplotlib.pyplot as plt 
+import numpy as np
+
 
 
 #getting access from Spotipy
@@ -123,19 +123,18 @@ dance_data2 = df6.groupby(['artist'])['danceability'].mean()
  
 
 #writing out the top artists who appeared in the top 100 and the average danceability 
-print("The average dancebility of Ariana Grande's's songs in Addie's top 100 is " + str(dance_data2[4]) + ". She appeared in it " + str(count2[0]) + " times.")
+print("The average danceability of Ariana Grande's's songs in Addie's top 100 is " + str(dance_data2[4]) + ". She appeared in it " + str(count2[0]) + " times.")
 
-print("The average dancebililty of Taylor Swift's songs in Addie's top 100 is " + str(dance_data2[54]) + ". She appeared in it " + str(count2[1]) + " times.")
+print("The average danceabililty of Taylor Swift's songs in Addie's top 100 is " + str(dance_data2[54]) + ". She appeared in it " + str(count2[1]) + " times.")
 
-print("The average dancebililty of Justin Bieber's songs in Addie's top 100 is " + str(dance_data2[22]) + ". He appeared in it " + str(count2[2]) + " times.")
+print("The average danceabililty of Justin Bieber's songs in Addie's top 100 is " + str(dance_data2[22]) + ". He appeared in it " + str(count2[2]) + " times.")
 
-print("The average dancebililty of Madison Beer's songs in Addie's top 100 is " + str(dance_data2[34]) + ". She appeared in it " + str(count2[3]) + " times.")
+print("The average danceabililty of Madison Beer's songs in Addie's top 100 is " + str(dance_data2[34]) + ". She appeared in it " + str(count2[3]) + " times.")
  
-print("The average dancebililty of Zara Larsson's songs in Addie's top 100 is " + str(dance_data2[-4]) + ". She appeared in it " + str(count2[4]) + " times.")
+print("The average danceabililty of Zara Larsson's songs in Addie's top 100 is " + str(dance_data2[-4]) + ". She appeared in it " + str(count2[4]) + " times.")
 
-
-
-sns.set_theme(color_codes=True)
-tips=sns.load_dataset("tips")
-
-sns.regplot(x="danceability", y="popularity",data=tips);
+company = ['google', 'amazon', 'msfgt', 'fb']
+revenue = []
+ypos = np.arange(len(company))
+ypos
+plt.bar(ypos, revenue)
