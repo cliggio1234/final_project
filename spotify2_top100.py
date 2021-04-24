@@ -57,12 +57,29 @@ df6 = pd.DataFrame(tracks6, columns = ['name', 'album', 'artist',  'popularity',
 df6.to_csv("addie-top-100.csv", sep = ',')
 
 
+count = df6['artist'].value_counts()
+#print(count)
+
+dance_data = df6.groupby(['artist'])['danceability'].mean()
+#print(dance_data[:60])
+
+print("The average dancebility of Ariana Grande's's songs in Addie's top 100 is " + str(dance_data[4]) + ". She appeared in it " + str(count[0]) + " times.")
+
+print("The average dancebililty of Taylor Swift's songs in Addie's top 100 is " + str(dance_data[54]) + ". She appeared in it " + str(count[1]) + " times.")
+
+print("The average dancebililty of Justin Bieber's songs in Addie's top 100 is " + str(dance_data[22]) + ". He appeared in it " + str(count[2]) + " times.")
+
+print("The average dancebililty of Madison Beer's songs in Addie's top 100 is " + str(dance_data[34]) + ". She appeared in it " + str(count[3]) + " times.")
+ 
+print("The average dancebililty of Zara Larsson's songs in Addie's top 100 is " + str(dance_data[-4]) + ". She appeared in it " + str(count[4]) + " times.")
+
 #converting addie-top-100.csv to SQlite3
 
 df6 = pd.read_csv('addie-top-100.csv', encoding = "UTF-8", index_col = [0])
 df6.columns = df6.columns.str.strip()
 df6.columns = df6.columns.str.replace("."," ")
 df6.head()
+
 
 conn = sqlite3.connect('addieTopDB.db')
 c = conn.cursor
@@ -71,7 +88,6 @@ c.execute('''SELECT * FROM AddieTopSongs;''')
 data = pd.DataFrame(c.fetchall())
 data.columns = [x[0] for x in c.description]
 data
-
 
 
 

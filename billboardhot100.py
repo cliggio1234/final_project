@@ -92,6 +92,7 @@ def main_2():
     count_frequencies(chartConn, chartCursor, songTable)
 
 
+
     
 def main():
     """
