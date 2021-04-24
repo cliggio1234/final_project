@@ -4,6 +4,10 @@ import pandas as pd
 import time 
 import sqlite3
 import csv_to_sqlite
+import numpy as np
+import seaborn as sns 
+import matplotlib.pyplot as plt 
+
 
 #getting access from Spotipy
 client_id = 'c7c042c1a50a4202b30e64d401461e2b'
@@ -128,3 +132,10 @@ print("The average dancebililty of Justin Bieber's songs in Addie's top 100 is "
 print("The average dancebililty of Madison Beer's songs in Addie's top 100 is " + str(dance_data2[34]) + ". She appeared in it " + str(count2[3]) + " times.")
  
 print("The average dancebililty of Zara Larsson's songs in Addie's top 100 is " + str(dance_data2[-4]) + ". She appeared in it " + str(count2[4]) + " times.")
+
+
+
+sns.set_theme(color_codes=True)
+tips=sns.load_dataset("tips")
+
+sns.regplot(x="danceability", y="popularity",data=tips);
