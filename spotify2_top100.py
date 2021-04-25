@@ -73,21 +73,5 @@ print("The average dancebililty of Madison Beer's songs in Addie's top 100 is " 
  
 print("The average dancebililty of Zara Larsson's songs in Addie's top 100 is " + str(dance_data[-4]) + ". She appeared in it " + str(count[4]) + " times.")
 
-#converting addie-top-100.csv to SQlite3
-
-df6 = pd.read_csv('addie-top-100.csv', encoding = "UTF-8", index_col = [0])
-df6.columns = df6.columns.str.strip()
-df6.columns = df6.columns.str.replace("."," ")
-df6.head()
-
-
-conn = sqlite3.connect('addieTopDB.db')
-c = conn.cursor
-df6.to_sql("AddieTopSongs", conn)
-c.execute('''SELECT * FROM AddieTopSongs;''')
-data = pd.DataFrame(c.fetchall())
-data.columns = [x[0] for x in c.description]
-data
-
 
 

@@ -63,20 +63,3 @@ print("The average dancebililty of Chelsea Cutler's songs in my top 100 is " + s
  
 print("The average dancebililty of Lost Kings's songs in my top 100 is " + str(dance_data[34]) + ". They appeared in my top 100 " + str(count[4]) + " times.")
 
-#converting my My-top-100.csv to SQlite3
-
-df5 = pd.read_csv('my-top-100.csv', encoding = "UTF-8", index_col = [0])
-df5.columns = df5.columns.str.strip()
-df5.columns = df5.columns.str.replace("."," ")
-df5.head()
-     
-conn = sqlite3.connect('myTopDB.db')
-c = conn.cursor
-df5.to_sql("MyTopSongs_1", conn)
-c.execute('''SELECT * FROM MyTopSongs;''')
-data = pd.DataFrame(c.fetchall())
-data.columns = [x[0] for x in c.description]
-data
-
-
-
