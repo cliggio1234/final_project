@@ -27,6 +27,7 @@ def setUpHot100Table(tablename, curr, conn):
     * Create table containing Top 100 Billboard songs.
     """
     curr.execute("DROP TABLE IF EXISTS %s" % tablename)
+
     curr.execute("CREATE TABLE %s (Rank INTEGER, Title TEXT, Artist TEXT, Weeks INTEGER)" % tablename)
     conn.commit()
 
@@ -64,7 +65,7 @@ def insert_addie(songTable):
     lowercolumns = ["name", "album", "artist"]
     for col in lowercolumns:
         topSongs[col] = topSongs[col].apply(lambda x : x.lower())
-    topSongs.to_sql(songTable, chartConn)
+    topSongs.to_sql(songTable, chartConn, if_exists='append')
     chartConn.commit()
 
 def get_conns():
@@ -74,7 +75,7 @@ def get_conns():
     chartCursor = chartConn.cursor()
     return chartConn, chartCursor
 
-def count_frequencies(chartConn, chartCursor, songTable):
+def count_frequencies(chartConn, chartCursor, songTable, frequencyTable):
     """
     * Count number of times top song favorites appear on
     billboard.
@@ -82,17 +83,10 @@ def count_frequencies(chartConn, chartCursor, songTable):
     columns = ["Artist", "Title", "Present"]
     values = list(chartCursor.execute("SELECT A.Artist, A.Title, B.popularity FROM Billboard_Hot_100 AS A LEFT OUTER JOIN %s AS B ON A.Title = B.name AND A.Artist = B.artist;" % songTable))
     data = pd.DataFrame(values).rename(columns = { num : columns[num] for num in range(len(columns))})
-    data["Present"] = data["Present"].apply(lambda x : 1 if pd.isnull(x) else 2)
-    print(data)
-
-def main_2():
-    songTable = "MyTopSongs_Addie"
-    insert_addie(songTable)
-    chartConn, chartCursor = get_conns()
-    count_frequencies(chartConn, chartCursor, songTable)
-
-
-    
+    data["Present"] = data["Present"].apply(lambda x : 0 if pd.isnull(x) else 1)
+    data.to_sql(frequencyTable, chartConn, if_exists='append')
+    #return data
+   
 def main():
     """
     * Perform key steps in order.
@@ -104,6 +98,13 @@ def main():
     curr, conn = setUpDatabase(db_name)
     setUpHot100Table(tablename,curr,conn)
     insert_data(data,tablename,curr,conn)
+
+def main_2():
+    songTable = "MyTopSongs_Addie"
+    frequencyTable = "Addie_Billboard"
+    insert_addie(songTable)
+    chartConn, chartCursor = get_conns()
+    count_frequencies(chartConn, chartCursor, songTable, frequencyTable)
 
 if __name__ == "__main__":
     main()
