@@ -66,15 +66,15 @@ def insert_artist_data(data1, tablename_artist, curr, conn, chunksize = 25):
         curr.execute("INSERT INTO %s (Rank,Artist,Weeks) VALUES %s" % (tablename_artist, ','.join(values)))
         conn.commit()
 
-def insert_data2():
+def insert_mytop100(artistFrequency):
     path = os.path.dirname(os.path.abspath(__file__))
     chartConnPath = path+'/Chart_Data_2021_04_20.db'
     chartConn = sqlite3.connect(chartConnPath)
     chartCursor = chartConn.cursor()
-    topSongs = pd.read_csv('my-top-100.csv', encoding = "UTF-8", index_col = [0])
-    topSongs.columns = topSongs.columns.str.strip()
-    topSongs.columns = topSongs.columns.str.replace("."," ")
-    topSongs.to_sql("MyTopSongs", chartConn)
+    topArtists = pd.read_csv('my-top-100.csv', encoding = "UTF-8", index_col = [0])
+    topArtists.columns = topArtists.columns.str.strip()
+    topArtists.columns = topArtists.columns.str.replace("."," ")
+    topArtists.to_sql(artistFrequency, chartConn, if_exists='append')
     chartConn.commit()
 
 def insert_addie(songTable):
@@ -109,6 +109,17 @@ def count_frequencies(chartConn, chartCursor, songTable, frequencyTable):
     data["Present"] = data["Present"].apply(lambda x : 0 if pd.isnull(x) else 1)
     data.to_sql(frequencyTable, chartConn, if_exists='append')
 
+def count_frequencies2(chartConn, chartCursor, artistFrequency, artistTable):
+    """
+    * Count number of times top song favorites appear on
+    billboard.
+    """
+    columns = ["Artist", "Present"]
+    values = list(chartCursor.execute("SELECT A.Artist, B.popularity FROM Billboard_Artist_100 AS A LEFT OUTER JOIN %s AS B ON A.Artist = B.artist;" % artistFrequency))
+    data = pd.DataFrame(values).rename(columns = { num : columns[num] for num in range(len(columns))})
+    data["Present"] = data["Present"].apply(lambda x : 0 if pd.isnull(x) else 1)
+    data.to_sql(artistTable, chartConn, if_exists='append')
+
 def main():
     """
     * Perform key steps in order.
@@ -128,9 +139,13 @@ def main():
 def main_2():
     songTable = "MyTopSongs_Addie"
     frequencyTable = "Addie_Billboard"
+    artistFrequency = "Christina_TopArtists" 
+    artistTable = "Christina_Billboard"
     insert_addie(songTable)
+    insert_mytop100(artistFrequency)
     chartConn, chartCursor = get_conns()
     count_frequencies(chartConn, chartCursor, songTable, frequencyTable)
+    count_frequencies2(chartConn, chartCursor, artistFrequency, artistTable)
 
 if __name__ == "__main__":
     main()
