@@ -117,6 +117,13 @@ df6.to_csv("addie-top-100.csv", sep = ',')
 #getting the amount of times that an artist appears in top100.
 count2 = df6['artist'].value_counts().tolist()
 #print(count2)
+pop_for_visual = df6['popularity'].tolist()
+dance_for_visual = df6['danceability'].tolist()
+
+pop_for_visual1 = df5['popularity'].tolist()
+dance_for_visual1 = df5['danceability'].tolist()
+
+
 
 print(type(count2))
 
@@ -144,7 +151,7 @@ print("The average danceabililty of Zara Larsson's songs in Addie's top 100 is "
 
 """
 
-
+"""
 labels = ['Ariana Grande', 'Taylor Swift', 'Justin Bieber', 'Madison Beer', 'Zara Larsson']
 counts_per_artist = [count_for_visual[0], count_for_visual[1], count_for_visual[2], count_for_visual[3], count_for_visual[4]]
 plt.bar(labels, counts_per_artist, align = "center", color = ["blue", "blue", "blue", "blue", "blue"])
@@ -153,3 +160,21 @@ plt.xlabel("Top 5 Artist Names")
 plt.ylabel("Frequency")
 plt.savefig("Addie_countper_artist.png")
 plt.show()
+"""
+
+
+fig, ax = plt.subplots()
+for color in ['tab:blue']:
+    x = pop_for_visual
+    y = dance_for_visual
+for color in['tab:green']:
+    x= pop_for_visual1
+    y= dance_for_visual1
+    ax.scatter(x, y, c=color, label=color,
+               alpha=0.3, edgecolors='none')
+
+ax.legend()
+ax.grid(True)
+
+plt.show()
+
