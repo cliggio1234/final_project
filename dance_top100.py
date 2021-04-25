@@ -164,17 +164,16 @@ plt.show()
 
 
 fig, ax = plt.subplots()
-for color in ['tab:blue']:
-    x = pop_for_visual
-    y = dance_for_visual
 for color in['tab:green']:
     x= pop_for_visual1
     y= dance_for_visual1
-    ax.scatter(x, y, c=color, label=color,
+    ax.scatter(x, y, c=color, label=color, 
                alpha=0.3, edgecolors='none')
-
+plt.title("Christina's Top 100 Popularity Versus Danceability")
+plt.xlabel("Popularity")
+plt.ylabel("Danceability")
 ax.legend()
 ax.grid(True)
-
+plt.savefig("Scatterplot_dancevspop.png")
 plt.show()
 

@@ -50,6 +50,7 @@ df5 = pd.DataFrame(tracks5, columns = ['name', 'album', 'artist',  'popularity',
 count = df5['artist'].value_counts()
 #print(count)
 
+
 dance_data = df5.groupby(['artist'])['danceability'].mean()
 #print(dance_data)
 
