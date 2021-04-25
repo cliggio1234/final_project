@@ -4,6 +4,7 @@ import pandas as pd
 import time 
 import sqlite3
 import csv_to_sqlite
+import matplotlib
 import matplotlib.pyplot as plt 
 import numpy as np
 
@@ -114,9 +115,17 @@ df6 = pd.DataFrame(tracks6, columns = ['name', 'album', 'artist',  'popularity',
 df6.to_csv("addie-top-100.csv", sep = ',')
 
 #getting the amount of times that an artist appears in top100.
-count2 = df6['artist'].value_counts()
+count2 = df6['artist'].value_counts().tolist()
 #print(count2)
 
+print(type(count2))
+
+count_for_visual = count2[:5]
+print(count_for_visual)
+
+
+
+"""
 #getting the average dancebility of the songs that appear on top 100 for each artist
 dance_data2 = df6.groupby(['artist'])['danceability'].mean()
 #print(dance_data2[:60])
@@ -133,8 +142,14 @@ print("The average danceabililty of Madison Beer's songs in Addie's top 100 is "
  
 print("The average danceabililty of Zara Larsson's songs in Addie's top 100 is " + str(dance_data2[-4]) + ". She appeared in it " + str(count2[4]) + " times.")
 
-company = ['google', 'amazon', 'msfgt', 'fb']
-revenue = []
-ypos = np.arange(len(company))
-ypos
-plt.bar(ypos, revenue)
+"""
+
+
+labels = ['Ariana Grande', 'Taylor Swift', 'Justin Bieber', 'Madison Beer', 'Zara Larsson']
+counts_per_artist = [count_for_visual[0], count_for_visual[1], count_for_visual[2], count_for_visual[3], count_for_visual[4]]
+plt.bar(labels, counts_per_artist, align = "center", color = ["blue", "blue", "blue", "blue", "blue"])
+plt.title("The Amount Top Artists Appeared in Addie's Top 100 Songs")
+plt.xlabel("Top 5 Artist Names")
+plt.ylabel("Frequency")
+plt.savefig("Addie_countper_artist.png")
+plt.show()
