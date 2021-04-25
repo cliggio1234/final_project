@@ -53,13 +53,17 @@ count = df5['artist'].value_counts()
 dance_data = df5.groupby(['artist'])['danceability'].mean()
 #print(dance_data)
 
-print("The average dancebility of Bazzi's songs in my top 100 is " + str(dance_data[3]) + ". He appeared in my top 100 " + str(count[0]) + " times.")
+file = open("myavg_dance.txt", "a")
 
-print("The average dancebililty of Quinn XCII's songs in my top 100 is " + str(dance_data[43]) + ". He appeared in my top 100 " + str(count[1]) + " times.")
+file.write("The average dancebility of Bazzi's songs in my top 100 is " + str(dance_data[3]) + ". He appeared in my top 100 " + str(count[0]) + " times.\n"
 
-print("The average dancebililty of One Direction's songs in my top 100 is " + str(dance_data[41]) + ". They appeared in my top 100 " + str(count[2]) + " times.")
+"The average dancebililty of Quinn XCII's songs in my top 100 is " + str(dance_data[43]) + ". He appeared in my top 100 " + str(count[1]) + " times.\n"
 
-print("The average dancebililty of Chelsea Cutler's songs in my top 100 is " + str(dance_data[9]) + ". She appeared in my top 100 " + str(count[3]) + " times.")
+"The average dancebililty of One Direction's songs in my top 100 is " + str(dance_data[41]) + ". They appeared in my top 100 " + str(count[2]) + " times.\n"
+
+"The average dancebililty of Chelsea Cutler's songs in my top 100 is " + str(dance_data[9]) + ". She appeared in my top 100 " + str(count[3]) + " times.\n"
  
-print("The average dancebililty of Lost Kings's songs in my top 100 is " + str(dance_data[34]) + ". They appeared in my top 100 " + str(count[4]) + " times.")
+"The average dancebililty of Lost Kings's songs in my top 100 is " + str(dance_data[34]) + ". They appeared in my top 100 " + str(count[4]) + " times.\n"
 
+ )
+file.close()
