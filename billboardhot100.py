@@ -12,6 +12,10 @@ def getChart(date):
     data = billboard.ChartData('hot-100', date = date)
     return data
 
+def getArtistChart(date):
+    data1 = billboard.ChartData('artist-100', date = date)
+    return data1
+
 # Create Database
 def setUpDatabase(db_name):
     """
@@ -30,6 +34,14 @@ def setUpHot100Table(tablename, curr, conn):
     curr.execute("CREATE TABLE %s (Rank INTEGER, Title TEXT, Artist TEXT, Weeks INTEGER)" % tablename)
     conn.commit()
 
+def setUpHArtist100Table(tablename_artist, curr, conn):
+    """
+    * Create table containing Top 100 Billboard songs.
+    """
+    curr.execute("DROP TABLE IF EXISTS %s" % tablename_artist)
+    curr.execute("CREATE TABLE %s (Rank INTEGER, Title TEXT, Artist TEXT, Weeks INTEGER)" % tablename_artist)
+    conn.commit()
+
 def insert_data(data, tablename, curr, conn, chunksize = 25):
     """
     * Insert chart data in chunks of 25.
@@ -40,6 +52,18 @@ def insert_data(data, tablename, curr, conn, chunksize = 25):
         for rank, entry in enumerate(entries):
             values.append('(%s,"%s","%s","%s")' % (rank + 1 + index, entry.title, entry.artist, entry.weeks))
         curr.execute("INSERT INTO %s (Rank,Title,Artist,Weeks) VALUES %s" % (tablename, ','.join(values)))
+        conn.commit()
+
+def insert_artist_data(data1, tablename_artist, curr, conn, chunksize = 25):
+    """
+    * Insert artist 100 data in chunks of 25.
+    """
+    for index in range(0, len(data1.entries), chunksize):
+        values = []
+        entries = data1.entries[index:index+chunksize]
+        for rank, entry in enumerate(entries):
+            values.append('(%s,"%s","%s")' % (rank + 1 + index, entry.artist, entry.weeks))
+        curr.execute("INSERT INTO %s (Rank,Artist,Weeks) VALUES %s" % (tablename_artist, ','.join(values)))
         conn.commit()
 
 def insert_data2():
@@ -92,10 +116,14 @@ def main():
     dt = "2021-04-20"
     db_name = "Chart_Data_%s.db" % dt.replace('-', '_')
     tablename = 'Billboard_Hot_100' 
+    tablename_artist = 'Billboard_Artist_100'
     data = getChart(dt)
+    data1 = getArtistChart(dt)
     curr, conn = setUpDatabase(db_name)
     setUpHot100Table(tablename,curr,conn)
+    setUpHArtist100Table(tablename_artist,curr,conn)
     insert_data(data,tablename,curr,conn)
+    insert_artist_data(data1,tablename_artist,curr,conn)
 
 def main_2():
     songTable = "MyTopSongs_Addie"
