@@ -45,7 +45,7 @@ def setUpHArtist100Table(tablename_artist, curr, conn):
     * Create table containing Top 100 Billboard Artists.
     """
     curr.execute("DROP TABLE IF EXISTS %s" % tablename_artist)
-    curr.execute("CREATE TABLE %s (Rank INTEGER, Title TEXT, Artist TEXT, Weeks INTEGER)" % tablename_artist)
+    curr.execute("CREATE TABLE %s (Rank INTEGER, Artist TEXT, Weeks INTEGER)" % tablename_artist)
     conn.commit()
 
 def insert_data(data, tablename, curr, conn, chunksize = 25):
@@ -97,9 +97,9 @@ def insert_addie(songTable):
     topSongs = pd.read_csv('addie-top-100.csv', encoding = "UTF-8", index_col = [0])
     topSongs.columns = topSongs.columns.str.strip()
     topSongs.columns = topSongs.columns.str.replace("."," ")
-    lowercolumns = ["name", "album", "artist"]
-    for col in lowercolumns:
-        topSongs[col] = topSongs[col].apply(lambda x : x.lower())
+    #lowercolumns = ["name", "album", "artist"]
+    #for col in lowercolumns:
+    #    topSongs[col] = topSongs[col].apply(lambda x : x.lower())
     topSongs.to_sql(songTable, chartConn, if_exists='append')
     chartConn.commit()
 
@@ -132,6 +132,12 @@ def count_frequencies2(chartConn, chartCursor, artistFrequency, artistTable):
     data["Present"] = data["Present"].apply(lambda x : 0 if pd.isnull(x) else 1)
     data.to_sql(artistTable, chartConn, if_exists='append')
 
+def get_results():
+    """
+    Write a text file concluding all results from both tables (hot 100 and artist 100)
+    """
+    #how do I access rows from database? how many rows have a 1 in them divided by amount of rows 
+
 def main():
     """
     * Perform key steps in order.
@@ -143,9 +149,9 @@ def main():
     data = getChart(dt)
     data1 = getArtistChart(dt)
     curr, conn = setUpDatabase(db_name)
-    setUpHot100Table(tablename,curr,conn)
+    #setUpHot100Table(tablename,curr,conn)
     setUpHArtist100Table(tablename_artist,curr,conn)
-    insert_data(data,tablename,curr,conn)
+    #insert_data(data,tablename,curr,conn)
     insert_artist_data(data1,tablename_artist,curr,conn)
 
 def main_2():
