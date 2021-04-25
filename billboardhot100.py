@@ -8,11 +8,17 @@ import matplotlib.pyplot as plt
 
 
 def getChart(date):
+    """
+    Accessing Hot 100 Songs
+    """
     # starter code to pull from Billboard API from: https://rapidapi.com/LDVIN/api/billboard-api
     data = billboard.ChartData('hot-100', date = date)
     return data
 
 def getArtistChart(date):
+    """
+    Accessing Artist 100
+    """
     data1 = billboard.ChartData('artist-100', date = date)
     return data1
 
@@ -36,7 +42,7 @@ def setUpHot100Table(tablename, curr, conn):
 
 def setUpHArtist100Table(tablename_artist, curr, conn):
     """
-    * Create table containing Top 100 Billboard songs.
+    * Create table containing Top 100 Billboard Artists.
     """
     curr.execute("DROP TABLE IF EXISTS %s" % tablename_artist)
     curr.execute("CREATE TABLE %s (Rank INTEGER, Title TEXT, Artist TEXT, Weeks INTEGER)" % tablename_artist)
@@ -44,7 +50,7 @@ def setUpHArtist100Table(tablename_artist, curr, conn):
 
 def insert_data(data, tablename, curr, conn, chunksize = 25):
     """
-    * Insert chart data in chunks of 25.
+    * Insert chart data in chunks of 25. Hot 100
     """
     for index in range(0, len(data.entries), chunksize):
         values = []
@@ -56,7 +62,7 @@ def insert_data(data, tablename, curr, conn, chunksize = 25):
 
 def insert_artist_data(data1, tablename_artist, curr, conn, chunksize = 25):
     """
-    * Insert artist 100 data in chunks of 25.
+    * Insert artist 100 data in chunks of 25. Artist 100
     """
     for index in range(0, len(data1.entries), chunksize):
         values = []
@@ -67,6 +73,9 @@ def insert_artist_data(data1, tablename_artist, curr, conn, chunksize = 25):
         conn.commit()
 
 def insert_mytop100(artistFrequency):
+    """
+    Christina's Top 100 Songs
+    """
     path = os.path.dirname(os.path.abspath(__file__))
     chartConnPath = path+'/Chart_Data_2021_04_20.db'
     chartConn = sqlite3.connect(chartConnPath)
@@ -78,6 +87,9 @@ def insert_mytop100(artistFrequency):
     chartConn.commit()
 
 def insert_addie(songTable):
+    """
+    Addie's Top 100 Songs
+    """
     path = os.path.dirname(os.path.abspath(__file__))
     chartConnPath = path+'/Chart_Data_2021_04_20.db'
     chartConn = sqlite3.connect(chartConnPath)
@@ -111,7 +123,7 @@ def count_frequencies(chartConn, chartCursor, songTable, frequencyTable):
 
 def count_frequencies2(chartConn, chartCursor, artistFrequency, artistTable):
     """
-    * Count number of times top song favorites appear on
+    * Count number of times top artists favorites appear on
     billboard.
     """
     columns = ["Artist", "Present"]
