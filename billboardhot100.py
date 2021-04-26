@@ -57,6 +57,7 @@ def insert_data(data, tablename, curr, conn, chunksize = 25):
         entries = data.entries[index:index+chunksize]
         for rank, entry in enumerate(entries):
             values.append('(%s,"%s","%s","%s")' % (rank + 1 + index, entry.title, entry.artist, entry.weeks))
+        #curr.execute("DROP TABLE IF EXISTS %s)" % tablename)
         curr.execute("INSERT INTO %s (Rank,Title,Artist,Weeks) VALUES %s" % (tablename, ','.join(values)))
         conn.commit()
 
@@ -69,6 +70,7 @@ def insert_artist_data(data1, tablename_artist, curr, conn, chunksize = 25):
         entries = data1.entries[index:index+chunksize]
         for rank, entry in enumerate(entries):
             values.append('(%s,"%s","%s")' % (rank + 1 + index, entry.artist, entry.weeks))
+        #curr.execute("DROP TABLE IF EXISTS %s)" % tablename_artist)
         curr.execute("INSERT INTO %s (Rank,Artist,Weeks) VALUES %s" % (tablename_artist, ','.join(values)))
         conn.commit()
 
@@ -83,7 +85,7 @@ def insert_mytop100(artistFrequency):
     topArtists = pd.read_csv('my-top-100.csv', encoding = "UTF-8", index_col = [0])
     topArtists.columns = topArtists.columns.str.strip()
     topArtists.columns = topArtists.columns.str.replace("."," ")
-    topArtists.to_sql(artistFrequency, chartConn, if_exists='append')
+    topArtists.to_sql(artistFrequency, chartConn, if_exists='replace')
     chartConn.commit()
 
 def insert_addie(songTable):
@@ -97,10 +99,7 @@ def insert_addie(songTable):
     topSongs = pd.read_csv('addie-top-100.csv', encoding = "UTF-8", index_col = [0])
     topSongs.columns = topSongs.columns.str.strip()
     topSongs.columns = topSongs.columns.str.replace("."," ")
-    #lowercolumns = ["name", "album", "artist"]
-    #for col in lowercolumns:
-    #    topSongs[col] = topSongs[col].apply(lambda x : x.lower())
-    topSongs.to_sql(songTable, chartConn, if_exists='append')
+    topSongs.to_sql(songTable, chartConn, if_exists='replace')
     chartConn.commit()
 
 def get_conns():
@@ -117,9 +116,10 @@ def count_frequencies(chartConn, chartCursor, songTable, frequencyTable):
     """
     columns = ["Artist", "Title", "Present"]
     values = list(chartCursor.execute("SELECT A.Artist, A.Title, B.popularity FROM Billboard_Hot_100 AS A LEFT OUTER JOIN %s AS B ON A.Title = B.name AND A.Artist = B.artist;" % songTable))
+    chartCursor.execute("DELETE FROM %s WHERE True" % frequencyTable)
     data = pd.DataFrame(values).rename(columns = { num : columns[num] for num in range(len(columns))})
     data["Present"] = data["Present"].apply(lambda x : 0 if pd.isnull(x) else 1)
-    data.to_sql(frequencyTable, chartConn, if_exists='append')
+    data.to_sql(frequencyTable, chartConn, if_exists='replace')
 
 def count_frequencies2(chartConn, chartCursor, artistFrequency, artistTable):
     """
@@ -127,16 +127,22 @@ def count_frequencies2(chartConn, chartCursor, artistFrequency, artistTable):
     billboard.
     """
     columns = ["Artist", "Present"]
-    values = list(chartCursor.execute("SELECT A.Artist, B.popularity FROM Billboard_Artist_100 AS A LEFT OUTER JOIN %s AS B ON A.Artist = B.artist;" % artistFrequency))
+    values = list(chartCursor.execute("SELECT DISTINCT A.Artist, B.popularity FROM Billboard_Artist_100 AS A LEFT OUTER JOIN %s AS B ON A.Artist = B.artist;" % artistFrequency))
+    chartCursor.execute("DELETE FROM %s WHERE True" % artistTable)
     data = pd.DataFrame(values).rename(columns = { num : columns[num] for num in range(len(columns))})
     data["Present"] = data["Present"].apply(lambda x : 0 if pd.isnull(x) else 1)
-    data.to_sql(artistTable, chartConn, if_exists='append')
+    data = data.drop_duplicates(subset = ["Artist"])
+    data.to_sql(artistTable, chartConn, if_exists='replace')
 
-def get_results():
+def get_results(chartCursor, frequencyTable, artistTable):
     """
     Write a text file concluding all results from both tables (hot 100 and artist 100)
     """
-    #how do I access rows from database? how many rows have a 1 in them divided by amount of rows 
+    values = chartCursor.execute("SELECT sum(Present)*1.0 / count(Present) FROM %s" % frequencyTable)
+    values = values.fetchone()
+    values2 = chartCursor.execute("SELECT sum(Present)*1.0 / count(Present) FROM %s" % artistTable)
+    values2 = values2.fetchone()
+    return values[0], values2[0]
 
 def main():
     """
@@ -149,9 +155,11 @@ def main():
     data = getChart(dt)
     data1 = getArtistChart(dt)
     curr, conn = setUpDatabase(db_name)
-    #setUpHot100Table(tablename,curr,conn)
+    setUpHot100Table(tablename,curr,conn)
     setUpHArtist100Table(tablename_artist,curr,conn)
-    #insert_data(data,tablename,curr,conn)
+    curr.execute("DELETE FROM %s WHERE True" % tablename)
+    insert_data(data,tablename,curr,conn)
+    curr.execute("DELETE FROM %s WHERE True" % tablename_artist)
     insert_artist_data(data1,tablename_artist,curr,conn)
 
 def main_2():
@@ -164,6 +172,7 @@ def main_2():
     chartConn, chartCursor = get_conns()
     count_frequencies(chartConn, chartCursor, songTable, frequencyTable)
     count_frequencies2(chartConn, chartCursor, artistFrequency, artistTable)
+    print(get_results(chartCursor, frequencyTable, artistTable))
 
 if __name__ == "__main__":
     main()
