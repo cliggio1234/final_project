@@ -206,7 +206,7 @@ def main_2():
     chartConn, chartCursor = get_conns()
     count_frequencies(chartConn, chartCursor, songTable, frequencyTable)
     count_frequencies2(chartConn, chartCursor, artistFrequency, artistTable)
-    print(get_results(chartCursor, frequencyTable, artistTable))
+    #print(get_results(chartCursor, frequencyTable, artistTable))
 
 if __name__ == "__main__":
     main()
