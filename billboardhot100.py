@@ -5,6 +5,7 @@ import billboard
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from textwrap import wrap
 
 
 def getChart(date):
@@ -120,6 +121,20 @@ def count_frequencies(chartConn, chartCursor, songTable, frequencyTable):
     data = pd.DataFrame(values).rename(columns = { num : columns[num] for num in range(len(columns))})
     data["Present"] = data["Present"].apply(lambda x : 0 if pd.isnull(x) else 1)
     data.to_sql(frequencyTable, chartConn, if_exists='replace')
+    arr = data.values.tolist()
+    arr = [[i + 1, arr[i][1], arr[i][2]] for i in range(len(arr))]
+    ranks = [i[0] for i in arr if i[2] == 1] #list comprehension
+    songs = [i[1] for i in arr if i[2] == 1]
+    songs = ["\n".join(wrap(song,8))for song in songs]
+    fig,ax = plt.subplots()
+    ax.plot(songs, ranks)
+    plt.title("Rank of Songs on Addie's Top 100 and the Billboard Hot 100")
+    plt.xlabel("Song Names")
+    plt.ylabel("Rank of Song on Billboard Chart")
+    plt.tight_layout()
+    plt.savefig('AddieTopSongs.png')
+    plt.show()
+    plt.close()
 
 def count_frequencies2(chartConn, chartCursor, artistFrequency, artistTable):
     """
@@ -131,8 +146,24 @@ def count_frequencies2(chartConn, chartCursor, artistFrequency, artistTable):
     chartCursor.execute("DELETE FROM %s WHERE True" % artistTable)
     data = pd.DataFrame(values).rename(columns = { num : columns[num] for num in range(len(columns))})
     data["Present"] = data["Present"].apply(lambda x : 0 if pd.isnull(x) else 1)
-    data = data.drop_duplicates(subset = ["Artist"])
     data.to_sql(artistTable, chartConn, if_exists='replace')
+    """
+    Create a bar graph (x-axis is artists who are present (have a 1), y-axis is rank of song. 
+    """
+    #print(data.values.tolist())
+    arr = data.values.tolist()
+    arr = [[i + 1, arr[i][0], arr[i][1]] for i in range(len(arr))]
+    ranks = [i[0] for i in arr if i[2] == 1] #list comprehension
+    artists = [i[1] for i in arr if i[2] == 1]
+    fig,ax = plt.subplots()
+    ax.barh(artists, ranks)
+    plt.title("Rank of Artists on Christina's Top 100 & Billboard Artist 100")
+    plt.xlabel("Artists")
+    plt.ylabel("Rank of Artists from Artist 100")
+    plt.tight_layout()
+    plt.savefig('ChristinaTopArtists.png')
+    plt.show()
+    plt.close()
 
 def get_results(chartCursor, frequencyTable, artistTable):
     """
@@ -147,6 +178,19 @@ def get_results(chartCursor, frequencyTable, artistTable):
     
     "Christina listens to " + str((values[0]*100)) + " percent of artists from the Billboard Artist 100. ")
     file.close()
+
+def graph_addie_data(chartConn, chartCursor, artistFrequency, artistTable, data):
+    """
+    Create a graph (x-axis is the songs that are present (have a 1), y-axis is rank of song. Line graph
+    """
+    print(data.values.tolist())
+
+def graph_christina_data():
+    """
+    Create a bar graph (x-axis is artists who are present (have a 1), y-axis is rank of song. 
+    """  
+    
+
 
 def main():
     """
@@ -176,7 +220,7 @@ def main_2():
     chartConn, chartCursor = get_conns()
     count_frequencies(chartConn, chartCursor, songTable, frequencyTable)
     count_frequencies2(chartConn, chartCursor, artistFrequency, artistTable)
-    print(get_results(chartCursor, frequencyTable, artistTable))
+    #print(get_results(chartCursor, frequencyTable, artistTable))
 
 if __name__ == "__main__":
     main()
