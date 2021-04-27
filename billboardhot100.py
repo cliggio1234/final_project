@@ -5,7 +5,7 @@ import billboard
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from textwrap import wrap
+from textwrap import wrap 
 
 
 def getChart(date):
@@ -74,7 +74,6 @@ def insert_artist_data(data1, tablename_artist, curr, conn, chunksize = 25):
         #curr.execute("DROP TABLE IF EXISTS %s)" % tablename_artist)
         curr.execute("INSERT INTO %s (Rank,Artist,Weeks) VALUES %s" % (tablename_artist, ','.join(values)))
         conn.commit()
-
 def insert_mytop100(artistFrequency):
     """
     Christina's Top 100 Songs
@@ -88,6 +87,7 @@ def insert_mytop100(artistFrequency):
     topArtists.columns = topArtists.columns.str.replace("."," ")
     topArtists.to_sql(artistFrequency, chartConn, if_exists='replace')
     chartConn.commit()
+    
 
 def insert_addie(songTable):
     """
