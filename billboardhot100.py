@@ -174,11 +174,10 @@ def get_results(chartCursor, frequencyTable, artistTable):
     values2 = chartCursor.execute("SELECT sum(Present)*1.0 / count(Present) FROM %s" % artistTable)
     values2 = values2.fetchone()
     file = open("myavg_dance.txt","a")
-    file.write(" Addie listens to " + str((values[0]*100)) + " percent of songs from the Billboard Hot 100. "
+    file.write(" Addie listens to " + str((values[0]*100)) + " percent of songs from the Billboard Hot 100.\n"
     
-    "Christina listens to " + str((values[0]*100)) + " percent of artists from the Billboard Artist 100. ")
+    "Christina listens to " + str((values[0]*100)) + " percent of artists from the Billboard Artist 100.\n")
     file.close()
-
 
 def main():
     """
