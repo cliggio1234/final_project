@@ -146,6 +146,7 @@ def count_frequencies2(chartConn, chartCursor, artistFrequency, artistTable):
     #chartCursor.execute("DELETE FROM %s WHERE True" % artistTable)
     data = pd.DataFrame(values).rename(columns = { num : columns[num] for num in range(len(columns))})
     data["Present"] = data["Present"].apply(lambda x : 0 if pd.isnull(x) else 1)
+    data = data.drop_duplicates(subset = ["Artist"])
     data.to_sql(artistTable, chartConn, if_exists='replace')
     """
     Create a bar graph (x-axis is artists who are present (have a 1), y-axis is rank of song. 
