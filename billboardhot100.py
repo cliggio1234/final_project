@@ -179,18 +179,6 @@ def get_results(chartCursor, frequencyTable, artistTable):
     "Christina listens to " + str((values[0]*100)) + " percent of artists from the Billboard Artist 100. ")
     file.close()
 
-def graph_addie_data(chartConn, chartCursor, artistFrequency, artistTable, data):
-    """
-    Create a graph (x-axis is the songs that are present (have a 1), y-axis is rank of song. Line graph
-    """
-    print(data.values.tolist())
-
-def graph_christina_data():
-    """
-    Create a bar graph (x-axis is artists who are present (have a 1), y-axis is rank of song. 
-    """  
-    
-
 
 def main():
     """
