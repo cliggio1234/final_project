@@ -117,7 +117,7 @@ def count_frequencies(chartConn, chartCursor, songTable, frequencyTable):
     """
     columns = ["Artist", "Title", "Present"]
     values = list(chartCursor.execute("SELECT A.Artist, A.Title, B.popularity FROM Billboard_Hot_100 AS A LEFT OUTER JOIN %s AS B ON A.Title = B.name AND A.Artist = B.artist;" % songTable))
-    chartCursor.execute("DELETE FROM %s WHERE True" % frequencyTable)
+    #chartCursor.execute("DELETE FROM %s WHERE True" % frequencyTable)
     data = pd.DataFrame(values).rename(columns = { num : columns[num] for num in range(len(columns))})
     data["Present"] = data["Present"].apply(lambda x : 0 if pd.isnull(x) else 1)
     data.to_sql(frequencyTable, chartConn, if_exists='replace')
@@ -143,7 +143,7 @@ def count_frequencies2(chartConn, chartCursor, artistFrequency, artistTable):
     """
     columns = ["Artist", "Present"]
     values = list(chartCursor.execute("SELECT DISTINCT A.Artist, B.popularity FROM Billboard_Artist_100 AS A LEFT OUTER JOIN %s AS B ON A.Artist = B.artist;" % artistFrequency))
-    chartCursor.execute("DELETE FROM %s WHERE True" % artistTable)
+    #chartCursor.execute("DELETE FROM %s WHERE True" % artistTable)
     data = pd.DataFrame(values).rename(columns = { num : columns[num] for num in range(len(columns))})
     data["Present"] = data["Present"].apply(lambda x : 0 if pd.isnull(x) else 1)
     data.to_sql(artistTable, chartConn, if_exists='replace')
@@ -207,7 +207,7 @@ def main_2():
     chartConn, chartCursor = get_conns()
     count_frequencies(chartConn, chartCursor, songTable, frequencyTable)
     count_frequencies2(chartConn, chartCursor, artistFrequency, artistTable)
-    #print(get_results(chartCursor, frequencyTable, artistTable))
+    print(get_results(chartCursor, frequencyTable, artistTable))
 
 if __name__ == "__main__":
     main()
